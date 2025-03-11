@@ -1,4 +1,3 @@
-
 public class DonateButton implements UserInterface {
     private DonorManagement donorManager;
     private String donorId;
