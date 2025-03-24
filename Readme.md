@@ -5,6 +5,7 @@ Sistem informasi yayasan sederhana yang dibangun menggunakan pendekatan Componen
 ## Deskripsi
 
 Aplikasi ini merupakan implementasi sistem manajemen yayasan sederhana yang memungkinkan pengguna untuk:
+
 - Mencatat donasi dari donatur
 - Mengelola dana yayasan
 - Mengalokasikan dana untuk program tertentu
@@ -20,15 +21,18 @@ Aplikasi ini dirancang menggunakan prinsip Component-Based Software Engineering 
 Sistem ini terdiri dari beberapa komponen utama:
 
 1. **DonorManager**
+
    - Mengelola data donatur dan donasi
    - Menyediakan interface `DonorManagement`
    - Membutuhkan interface `NotificationProvider`
 
 2. **FundManager**
+
    - Mengelola dana dan laporan keuangan
    - Menyediakan interface `FundManagement` dan `NotificationProvider`
 
 3. **DonateButton**
+
    - Antarmuka untuk melakukan donasi
    - Menyediakan interface `UserInterface`
    - Membutuhkan interface `DonorManagement`
@@ -41,6 +45,7 @@ Sistem ini terdiri dari beberapa komponen utama:
 ## Interface
 
 1. **DonorManagement**
+
    ```java
    public interface DonorManagement {
        public void recordDonation(String donorId, double amount);
@@ -49,6 +54,7 @@ Sistem ini terdiri dari beberapa komponen utama:
    ```
 
 2. **FundManagement**
+
    ```java
    public interface FundManagement {
        public void recordFunds(double amount, String source);
@@ -57,6 +63,7 @@ Sistem ini terdiri dari beberapa komponen utama:
    ```
 
 3. **NotificationProvider**
+
    ```java
    public interface NotificationProvider {
        public void sendNotification(String recipient, String message);
@@ -74,22 +81,27 @@ Sistem ini terdiri dari beberapa komponen utama:
 ## Cara Menjalankan Aplikasi
 
 ### Prasyarat
+
 - Java Development Kit (JDK) 8 atau lebih tinggi
 - Java IDE (Eclipse, IntelliJ IDEA, NetBeans) atau text editor dan command line
 
 ### Langkah-langkah
+
 1. Clone repository ini
+
    ```
    git clone https://github.com/ahmadsyah28/system-management-foundation.git
    cd system-management-foundation
    ```
 
 2. Kompilasi semua file Java
+
    ```
    javac *.java
    ```
 
 3. Jalankan aplikasi
+
    ```
    java YayasanSystem
    ```
@@ -99,17 +111,20 @@ Sistem ini terdiri dari beberapa komponen utama:
 ## Fitur
 
 1. **Donasi Baru**
+
    - Masukkan ID donor
    - Masukkan jumlah donasi
    - Sistem akan mencatat donasi dan mengirim notifikasi
 
 2. **Lihat Laporan Dana**
+
    - Menampilkan total dana yang terkumpul
    - Menampilkan dana yang telah dialokasikan
    - Menampilkan dana yang tersedia
    - Menampilkan riwayat transaksi
 
 3. **Lihat Info Donor**
+
    - Masukkan ID donor untuk melihat informasinya
    - Menampilkan total donasi dan riwayat donasi
 
@@ -130,6 +145,7 @@ Aplikasi ini menerapkan konsep "Design by Contract" dengan:
 ## Pengembangan Lebih Lanjut
 
 Beberapa ide untuk pengembangan lebih lanjut:
+
 - Menambahkan persistensi data menggunakan file atau database
 - Menambahkan GUI menggunakan JavaFX atau Swing
 - Menambahkan fitur autentikasi untuk admin dan donatur
@@ -139,6 +155,7 @@ Beberapa ide untuk pengembangan lebih lanjut:
 ## Kontribusi
 
 Kontribusi sangat diterima. Untuk berkontribusi:
+
 1. Fork repository ini
 2. Buat branch baru (`git checkout -b feature/fitur-baru`)
 3. Commit perubahan Anda (`git commit -m 'Menambahkan fitur baru'`)
@@ -146,5 +163,6 @@ Kontribusi sangat diterima. Untuk berkontribusi:
 5. Buat Pull Request baru
 
 ## Angota Tim
+
 1. Ahmad Syah Ramadhan (2208107010033)
 2. Hidayat Nur Hakim (2208107010063)
